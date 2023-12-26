@@ -18,12 +18,12 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        externalNativeBuild{
-            cmake{
-                val cppFlags = "-std=c++11" "-Wall"
-                val arguments = "-DANDROID_STL=c++_static"
-            }
-        }
+//        externalNativeBuild{
+//            cmake{
+//                val cppFlags = "-std=c++11", "-Wall"
+//                val arguments = "-DANDROID_STL=c++_static"
+//            }
+//        }
     }
 
     buildTypes {

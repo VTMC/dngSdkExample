@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/checkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <EditText
+        android:id="@+id/xValueTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="x value"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/yValueTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="y value"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/checkBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xValueTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/XYTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X:000 / Y:000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/RGBTxt"
+        app:layout_constraintEnd_toEndOf="@+id/RGBTxt"
+        app:layout_constraintStart_toStartOf="@+id/RGBTxt"
+        app:layout_constraintTop_toBottomOf="@+id/checkBtn" />
+
+    <TextView
+        android:id="@+id/RGBTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="R:000 / G:000 / B:000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectedImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/imageSelectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="ImageSelect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/selectedImageView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageSizeTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/imageSizeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="width: / height:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageSelectBtn"
+        app:layout_constraintEnd_toEndOf="@+id/selectedImageView"
+        app:layout_constraintStart_toStartOf="@+id/selectedImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

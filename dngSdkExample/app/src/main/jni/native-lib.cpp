@@ -2,6 +2,7 @@
 #include <string>
 #include <jni.h>
 #include <jni.h>
+#include <jni.h>
 
 extern "C"
 JNIEXPORT void JNICALL
@@ -12,3 +13,5 @@ Java_com_example_myapplication_MainActivity_00024Companion_helloJni(JNIEnv* env,
 
     return env->NewStringUTF(test.c_str());
 }
+extern "C"
+JNIEXPORT jobject
