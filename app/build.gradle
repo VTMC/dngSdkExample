@@ -34,7 +34,11 @@ android {
     externalNativeBuild{
         cmake {
             path file('src/main/jni/CMakeLists.txt')
-            version '3.18.1'
+            version '3.22.1'
+        }
+
+        ndkBuild{
+            path file("src/main/jni/dng_sdk/Android.mk")
         }
     }
 
@@ -44,6 +48,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildscript {
+        dependencies {
+            classpath 'com.android.tools.build:gradle:8.2.0'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -55,6 +66,7 @@ android {
     viewBinding{
         enabled = true
     }
+    ndkVersion '25.1.8937393'
 }
 
 dependencies {

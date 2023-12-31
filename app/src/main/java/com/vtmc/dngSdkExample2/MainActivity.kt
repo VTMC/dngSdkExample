@@ -3,12 +3,10 @@ package com.vtmc.dngSdkExample2
 import android.content.Intent
 import android.content.res.AssetManager
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.vtmc.dngSdkExample2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -62,8 +60,9 @@ class MainActivity : AppCompatActivity() {
                     val image_IS = contentResolver.openInputStream(data!!.data!!)
 
                     val image_path = data!!.data!!.path
-                    val assets = this.assets
-                    AImageDecoder_Jni(image_path!!, assets)
+
+//                    val assets = this.assets
+//                    AImageDecoder_Jni(image_path!!, assets)
 
                     val bmp_img = BitmapFactory.decodeStream(image_IS)
                     image_IS!!.close()

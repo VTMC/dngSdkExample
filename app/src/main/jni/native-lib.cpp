@@ -28,7 +28,7 @@ Java_com_vtmc_dngSdkExample2_MainActivity_00024Companion_helloJni(JNIEnv *env, j
 }
 
 
-extern "C"
+/*extern "C"
 JNIEXPORT jobject JNICALL
 Java_com_vtmc_dngSdkExample2_MainActivity_00024Companion_AImageDecoder_1Jni(JNIEnv *env,
                                                                             jobject thiz,
@@ -68,4 +68,4 @@ Java_com_vtmc_dngSdkExample2_MainActivity_00024Companion_AImageDecoder_1Jni(JNIE
 
 
     free(pixels);
-}
+}*/

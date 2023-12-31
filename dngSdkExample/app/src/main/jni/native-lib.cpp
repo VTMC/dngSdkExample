@@ -1,7 +1,4 @@
-#include <jni.h>
 #include <string>
-#include <jni.h>
-#include <jni.h>
 #include <jni.h>
 
 extern "C"
